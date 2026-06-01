@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Password Generator</title>
+
+  <!-- CSS file connect -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Password Generator</h1>
+
+    <!-- Password length input -->
+    <input type="number" id="length" placeholder="Enter length (4-50)">
+
+    <!-- Checkboxes -->
+    <div class="options">
+
+      <label>
+        <input type="checkbox" id="upper">
+        Uppercase
+      </label>
+
+      <label>
+        <input type="checkbox" id="lower">
+        Lowercase
+      </label>
+
+      <label>
+        <input type="checkbox" id="number">
+        Numbers
+      </label>
+
+      <label>
+        <input type="checkbox" id="symbol">
+        Symbols
+      </label>
+
+    </div>
+
+    <!-- Generate button -->
+    <button onclick="generatePassword()">
+      Generate Password
+    </button>
+
+    <!-- Password output -->
+    <input type="text" id="password" readonly>
+
+    <!-- Strength -->
+    <p id="strength"></p>
+
+    <!-- Label input -->
+    <input type="text" id="label" placeholder="Enter label">
+
+    <!-- Buttons -->
+    <button onclick="copyPassword()">
+      Copy Password
+    </button>
+
+    <button onclick="savePassword()">
+      Save Password
+    </button>
+
+    <!-- Search -->
+    <input type="text"
+           id="search"
+           placeholder="Search password"
+           onkeyup="displayPasswords()">
+
+    <!-- Saved passwords -->
+    <div id="savedPasswords"></div>
+
+  </div>
+
+  <!-- JS file connect -->
+  <script src="script.js"></script>
+
+</body>
+</html>
