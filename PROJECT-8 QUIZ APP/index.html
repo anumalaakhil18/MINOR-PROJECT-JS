@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div class="start-screen" id="startScreen">
+    <h1>Interactive Quiz App</h1>
+    <p>Test your knowledge with 10 questions!</p>
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div class="quiz-screen hidden" id="quizScreen">
+
+    <div class="top-bar">
+      <div>Question <span id="questionNumber"></span>/10</div>
+      <div>Total Time: <span id="totalTimer">0</span>s</div>
+      <div>Question Time: <span id="questionTimer">0</span>s</div>
+    </div>
+
+    <div class="quiz-box">
+      <h2 id="questionText"></h2>
+
+      <div class="options" id="optionsContainer"></div>
+
+      <button id="nextBtn">Next Question</button>
+    </div>
+  </div>
+
+  <!-- Result Screen -->
+  <div class="result-screen hidden" id="resultScreen">
+    <h1>Quiz Result</h1>
+
+    <div class="result-summary">
+      <p><strong>Score:</strong> <span id="score"></span></p>
+      <p><strong>Correct Answers:</strong> <span id="correct"></span></p>
+      <p><strong>Wrong Answers:</strong> <span id="wrong"></span></p>
+      <p><strong>Percentage:</strong> <span id="percentage"></span>%</p>
+      <p><strong>Grade:</strong> <span id="grade"></span></p>
+      <p><strong>Total Time:</strong> <span id="finalTime"></span> seconds</p>
+      <p><strong>Feedback:</strong> <span id="feedback"></span></p>
+    </div>
+
+    <h2>Question Review</h2>
+
+    <div id="reviewContainer"></div>
+
+    <button onclick="location.reload()">Restart Quiz</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
